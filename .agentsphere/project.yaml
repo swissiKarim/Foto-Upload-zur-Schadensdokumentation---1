@@ -1,7 +1,7 @@
 schemaVersion: 2
 rationale: >
   TypeScript-Bibliothek mit Jest-Tests. ts-jest kompiliert TypeScript direkt,
-  jest-junit schreibt JUnit-XML für das Evidenzpaket.
+  jest-junit schreibt JUnit-XML nach .agentsphere/reports/junit.xml für das Evidenzpaket.
 components:
   - name: app
     path: .
@@ -9,6 +9,7 @@ components:
       image: agentsphere/sandbox-polyglot
     verify:
       - npm ci
+      - mkdir -p .agentsphere/reports
       - npm test
     artifacts_ignore:
       - node_modules/

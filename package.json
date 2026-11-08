@@ -6,7 +6,7 @@
   "types": "dist/index.d.ts",
   "scripts": {
     "build": "tsc",
-    "test": "jest --reporters=default --reporters=jest-junit",
+    "test": "jest",
     "test:ci": "jest --reporters=jest-junit"
   },
   "keywords": [],
