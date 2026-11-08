@@ -1,29 +1,101 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuites name="jest tests" tests="52" failures="0" errors="0" time="1.616">
-  <testsuite name="US1 – Auszahlung berechnen" errors="0" failures="0" skipped="0" timestamp="2026-11-08T14:48:15" time="1.377" tests="52">
-    <testcase classname="US1 – Auszahlung berechnen Tarif basis (Selbstbeteiligung 500 EUR) akzeptiert Schadenshöhe ≥ 0 und liefert korrekte Selbstbeteiligung" name="US1 – Auszahlung berechnen Tarif basis (Selbstbeteiligung 500 EUR) akzeptiert Schadenshöhe ≥ 0 und liefert korrekte Selbstbeteiligung" time="0.002">
+<testsuites name="jest tests" tests="87" failures="0" errors="0" time="2.755">
+  <testsuite name="US1: Auszahlung berechnen" errors="0" failures="0" skipped="0" timestamp="2026-11-08T14:55:47" time="1.699" tests="35">
+    <testcase classname="US1: Auszahlung berechnen Selbstbeteiligungen je Tarif Tarif basis: Selbstbeteiligung 500 EUR" name="US1: Auszahlung berechnen Selbstbeteiligungen je Tarif Tarif basis: Selbstbeteiligung 500 EUR" time="0.003">
     </testcase>
-    <testcase classname="US1 – Auszahlung berechnen Tarif basis (Selbstbeteiligung 500 EUR) Schadenshöhe 0 EUR → Auszahlung 0 EUR" name="US1 – Auszahlung berechnen Tarif basis (Selbstbeteiligung 500 EUR) Schadenshöhe 0 EUR → Auszahlung 0 EUR" time="0.001">
+    <testcase classname="US1: Auszahlung berechnen Selbstbeteiligungen je Tarif Tarif komfort: Selbstbeteiligung 250 EUR" name="US1: Auszahlung berechnen Selbstbeteiligungen je Tarif Tarif komfort: Selbstbeteiligung 250 EUR" time="0.001">
+    </testcase>
+    <testcase classname="US1: Auszahlung berechnen Selbstbeteiligungen je Tarif Tarif premium: Selbstbeteiligung 100 EUR" name="US1: Auszahlung berechnen Selbstbeteiligungen je Tarif Tarif premium: Selbstbeteiligung 100 EUR" time="0">
+    </testcase>
+    <testcase classname="US1: Auszahlung berechnen Auszahlung nicht kleiner als 0 Schadenshöhe kleiner als Selbstbeteiligung ergibt 0 EUR Auszahlung" name="US1: Auszahlung berechnen Auszahlung nicht kleiner als 0 Schadenshöhe kleiner als Selbstbeteiligung ergibt 0 EUR Auszahlung" time="0">
+    </testcase>
+    <testcase classname="US1: Auszahlung berechnen Schadenshöhe 0 EUR Schadenshöhe 0 EUR wird korrekt verarbeitet" name="US1: Auszahlung berechnen Schadenshöhe 0 EUR Schadenshöhe 0 EUR wird korrekt verarbeitet" time="0">
+    </testcase>
+    <testcase classname="US1: Auszahlung berechnen Schadenshöhe genau auf Höhe der Selbstbeteiligung basis: Schaden = 500 EUR -&gt; Auszahlung 0 EUR" name="US1: Auszahlung berechnen Schadenshöhe genau auf Höhe der Selbstbeteiligung basis: Schaden = 500 EUR -&gt; Auszahlung 0 EUR" time="0">
+    </testcase>
+    <testcase classname="US1: Auszahlung berechnen Schadenshöhe genau auf Höhe der Selbstbeteiligung komfort: Schaden = 250 EUR -&gt; Auszahlung 0 EUR" name="US1: Auszahlung berechnen Schadenshöhe genau auf Höhe der Selbstbeteiligung komfort: Schaden = 250 EUR -&gt; Auszahlung 0 EUR" time="0">
+    </testcase>
+    <testcase classname="US1: Auszahlung berechnen Schadenshöhe genau auf Höhe der Selbstbeteiligung premium: Schaden = 100 EUR -&gt; Auszahlung 0 EUR" name="US1: Auszahlung berechnen Schadenshöhe genau auf Höhe der Selbstbeteiligung premium: Schaden = 100 EUR -&gt; Auszahlung 0 EUR" time="0">
+    </testcase>
+    <testcase classname="US1: Auszahlung berechnen Kaufmännische Rundung Rundungsfall 0,005 EUR wird auf 0,01 aufgerundet" name="US1: Auszahlung berechnen Kaufmännische Rundung Rundungsfall 0,005 EUR wird auf 0,01 aufgerundet" time="0.001">
+    </testcase>
+    <testcase classname="US1: Auszahlung berechnen Kaufmännische Rundung Beträge werden auf zwei Nachkommastellen gerundet" name="US1: Auszahlung berechnen Kaufmännische Rundung Beträge werden auf zwei Nachkommastellen gerundet" time="0">
+    </testcase>
+    <testcase classname="US2: Auszahlungsobergrenze Obergrenze basis: 5.000 EUR Auszahlung über 5.000 EUR wird auf 5.000 EUR begrenzt" name="US2: Auszahlungsobergrenze Obergrenze basis: 5.000 EUR Auszahlung über 5.000 EUR wird auf 5.000 EUR begrenzt" time="0">
+    </testcase>
+    <testcase classname="US2: Auszahlungsobergrenze Obergrenze basis: 5.000 EUR Auszahlung genau 5.000 EUR wird nicht gekürzt" name="US2: Auszahlungsobergrenze Obergrenze basis: 5.000 EUR Auszahlung genau 5.000 EUR wird nicht gekürzt" time="0">
+    </testcase>
+    <testcase classname="US2: Auszahlungsobergrenze Obergrenze basis: 5.000 EUR Auszahlung unter 5.000 EUR wird nicht gekürzt" name="US2: Auszahlungsobergrenze Obergrenze basis: 5.000 EUR Auszahlung unter 5.000 EUR wird nicht gekürzt" time="0">
+    </testcase>
+    <testcase classname="US2: Auszahlungsobergrenze Obergrenze komfort: 20.000 EUR Auszahlung über 20.000 EUR wird auf 20.000 EUR begrenzt" name="US2: Auszahlungsobergrenze Obergrenze komfort: 20.000 EUR Auszahlung über 20.000 EUR wird auf 20.000 EUR begrenzt" time="0">
+    </testcase>
+    <testcase classname="US2: Auszahlungsobergrenze Obergrenze komfort: 20.000 EUR Auszahlung genau 20.000 EUR wird nicht gekürzt" name="US2: Auszahlungsobergrenze Obergrenze komfort: 20.000 EUR Auszahlung genau 20.000 EUR wird nicht gekürzt" time="0">
+    </testcase>
+    <testcase classname="US2: Auszahlungsobergrenze Obergrenze komfort: 20.000 EUR Auszahlung unter 20.000 EUR wird nicht gekürzt" name="US2: Auszahlungsobergrenze Obergrenze komfort: 20.000 EUR Auszahlung unter 20.000 EUR wird nicht gekürzt" time="0.054">
+    </testcase>
+    <testcase classname="US2: Auszahlungsobergrenze Obergrenze premium: 50.000 EUR Auszahlung über 50.000 EUR wird auf 50.000 EUR begrenzt" name="US2: Auszahlungsobergrenze Obergrenze premium: 50.000 EUR Auszahlung über 50.000 EUR wird auf 50.000 EUR begrenzt" time="0">
+    </testcase>
+    <testcase classname="US2: Auszahlungsobergrenze Obergrenze premium: 50.000 EUR Auszahlung genau 50.000 EUR wird nicht gekürzt" name="US2: Auszahlungsobergrenze Obergrenze premium: 50.000 EUR Auszahlung genau 50.000 EUR wird nicht gekürzt" time="0.003">
+    </testcase>
+    <testcase classname="US2: Auszahlungsobergrenze Obergrenze premium: 50.000 EUR Auszahlung unter 50.000 EUR wird nicht gekürzt" name="US2: Auszahlungsobergrenze Obergrenze premium: 50.000 EUR Auszahlung unter 50.000 EUR wird nicht gekürzt" time="0.001">
+    </testcase>
+    <testcase classname="US2: Auszahlungsobergrenze Rundung bei Obergrenze Beträge bei Obergrenze werden auf zwei Nachkommastellen gerundet" name="US2: Auszahlungsobergrenze Rundung bei Obergrenze Beträge bei Obergrenze werden auf zwei Nachkommastellen gerundet" time="0">
+    </testcase>
+    <testcase classname="US2: Auszahlungsobergrenze gekuerzt-Feld ist immer gesetzt gekuerzt ist false wenn keine Kürzung" name="US2: Auszahlungsobergrenze gekuerzt-Feld ist immer gesetzt gekuerzt ist false wenn keine Kürzung" time="0">
+    </testcase>
+    <testcase classname="US2: Auszahlungsobergrenze gekuerzt-Feld ist immer gesetzt gekuerzt ist true wenn Kürzung angewendet" name="US2: Auszahlungsobergrenze gekuerzt-Feld ist immer gesetzt gekuerzt ist true wenn Kürzung angewendet" time="0">
+    </testcase>
+    <testcase classname="US3: Eingaben prüfen und Fehler melden Negative Schadenshöhe Negative Schadenshöhe wird abgewiesen" name="US3: Eingaben prüfen und Fehler melden Negative Schadenshöhe Negative Schadenshöhe wird abgewiesen" time="0.008">
+    </testcase>
+    <testcase classname="US3: Eingaben prüfen und Fehler melden Negative Schadenshöhe Fehlermeldung bei negativer Schadenshöhe ist auf Deutsch" name="US3: Eingaben prüfen und Fehler melden Negative Schadenshöhe Fehlermeldung bei negativer Schadenshöhe ist auf Deutsch" time="0">
+    </testcase>
+    <testcase classname="US3: Eingaben prüfen und Fehler melden Keine Zahl als Schadenshöhe String wird als Schadenshöhe abgewiesen" name="US3: Eingaben prüfen und Fehler melden Keine Zahl als Schadenshöhe String wird als Schadenshöhe abgewiesen" time="0">
+    </testcase>
+    <testcase classname="US3: Eingaben prüfen und Fehler melden Keine Zahl als Schadenshöhe null wird als Schadenshöhe abgewiesen" name="US3: Eingaben prüfen und Fehler melden Keine Zahl als Schadenshöhe null wird als Schadenshöhe abgewiesen" time="0.001">
+    </testcase>
+    <testcase classname="US3: Eingaben prüfen und Fehler melden Keine Zahl als Schadenshöhe undefined wird als Schadenshöhe abgewiesen" name="US3: Eingaben prüfen und Fehler melden Keine Zahl als Schadenshöhe undefined wird als Schadenshöhe abgewiesen" time="0.001">
+    </testcase>
+    <testcase classname="US3: Eingaben prüfen und Fehler melden Keine Zahl als Schadenshöhe NaN wird als Schadenshöhe abgewiesen" name="US3: Eingaben prüfen und Fehler melden Keine Zahl als Schadenshöhe NaN wird als Schadenshöhe abgewiesen" time="0">
+    </testcase>
+    <testcase classname="US3: Eingaben prüfen und Fehler melden Keine Zahl als Schadenshöhe Fehlermeldung bei ungültigem Typ ist auf Deutsch" name="US3: Eingaben prüfen und Fehler melden Keine Zahl als Schadenshöhe Fehlermeldung bei ungültigem Typ ist auf Deutsch" time="0.001">
+    </testcase>
+    <testcase classname="US3: Eingaben prüfen und Fehler melden Unbekannter Tarif Unbekannter Tarif wird abgewiesen" name="US3: Eingaben prüfen und Fehler melden Unbekannter Tarif Unbekannter Tarif wird abgewiesen" time="0">
+    </testcase>
+    <testcase classname="US3: Eingaben prüfen und Fehler melden Unbekannter Tarif Leerer String als Tarif wird abgewiesen" name="US3: Eingaben prüfen und Fehler melden Unbekannter Tarif Leerer String als Tarif wird abgewiesen" time="0.001">
+    </testcase>
+    <testcase classname="US3: Eingaben prüfen und Fehler melden Unbekannter Tarif null als Tarif wird abgewiesen" name="US3: Eingaben prüfen und Fehler melden Unbekannter Tarif null als Tarif wird abgewiesen" time="0">
+    </testcase>
+    <testcase classname="US3: Eingaben prüfen und Fehler melden Unbekannter Tarif Fehlermeldung bei unbekanntem Tarif ist auf Deutsch" name="US3: Eingaben prüfen und Fehler melden Unbekannter Tarif Fehlermeldung bei unbekanntem Tarif ist auf Deutsch" time="0">
+    </testcase>
+    <testcase classname="US3: Eingaben prüfen und Fehler melden Bei ungültigen Eingaben kein falsches Ergebnis Bei negativer Schadenshöhe wird kein Ergebnis geliefert" name="US3: Eingaben prüfen und Fehler melden Bei ungültigen Eingaben kein falsches Ergebnis Bei negativer Schadenshöhe wird kein Ergebnis geliefert" time="0.001">
+    </testcase>
+    <testcase classname="US3: Eingaben prüfen und Fehler melden Bei ungültigen Eingaben kein falsches Ergebnis Bei ungültigem Tarif wird kein Ergebnis geliefert" name="US3: Eingaben prüfen und Fehler melden Bei ungültigen Eingaben kein falsches Ergebnis Bei ungültigem Tarif wird kein Ergebnis geliefert" time="0">
+    </testcase>
+  </testsuite>
+  <testsuite name="US1 – Auszahlung berechnen" errors="0" failures="0" skipped="0" timestamp="2026-11-08T14:55:47" time="1.721" tests="52">
+    <testcase classname="US1 – Auszahlung berechnen Tarif basis (Selbstbeteiligung 500 EUR) akzeptiert Schadenshöhe ≥ 0 und liefert korrekte Selbstbeteiligung" name="US1 – Auszahlung berechnen Tarif basis (Selbstbeteiligung 500 EUR) akzeptiert Schadenshöhe ≥ 0 und liefert korrekte Selbstbeteiligung" time="0.003">
+    </testcase>
+    <testcase classname="US1 – Auszahlung berechnen Tarif basis (Selbstbeteiligung 500 EUR) Schadenshöhe 0 EUR → Auszahlung 0 EUR" name="US1 – Auszahlung berechnen Tarif basis (Selbstbeteiligung 500 EUR) Schadenshöhe 0 EUR → Auszahlung 0 EUR" time="0">
     </testcase>
     <testcase classname="US1 – Auszahlung berechnen Tarif basis (Selbstbeteiligung 500 EUR) Schadenshöhe = Selbstbeteiligung (500 EUR) → Auszahlung 0 EUR" name="US1 – Auszahlung berechnen Tarif basis (Selbstbeteiligung 500 EUR) Schadenshöhe = Selbstbeteiligung (500 EUR) → Auszahlung 0 EUR" time="0">
     </testcase>
-    <testcase classname="US1 – Auszahlung berechnen Tarif basis (Selbstbeteiligung 500 EUR) Schadenshöhe &lt; Selbstbeteiligung → Auszahlung 0 EUR (nicht negativ)" name="US1 – Auszahlung berechnen Tarif basis (Selbstbeteiligung 500 EUR) Schadenshöhe &lt; Selbstbeteiligung → Auszahlung 0 EUR (nicht negativ)" time="0">
+    <testcase classname="US1 – Auszahlung berechnen Tarif basis (Selbstbeteiligung 500 EUR) Schadenshöhe &lt; Selbstbeteiligung → Auszahlung 0 EUR (nicht negativ)" name="US1 – Auszahlung berechnen Tarif basis (Selbstbeteiligung 500 EUR) Schadenshöhe &lt; Selbstbeteiligung → Auszahlung 0 EUR (nicht negativ)" time="0.001">
     </testcase>
     <testcase classname="US1 – Auszahlung berechnen Tarif basis (Selbstbeteiligung 500 EUR) Schadenshöhe 1000 EUR → Auszahlung 500 EUR" name="US1 – Auszahlung berechnen Tarif basis (Selbstbeteiligung 500 EUR) Schadenshöhe 1000 EUR → Auszahlung 500 EUR" time="0">
     </testcase>
-    <testcase classname="US1 – Auszahlung berechnen Tarif basis (Selbstbeteiligung 500 EUR) Rundungsfall 0,005 EUR: Schadenshöhe 500,005 EUR → Auszahlung 0,01 EUR" name="US1 – Auszahlung berechnen Tarif basis (Selbstbeteiligung 500 EUR) Rundungsfall 0,005 EUR: Schadenshöhe 500,005 EUR → Auszahlung 0,01 EUR" time="0.001">
+    <testcase classname="US1 – Auszahlung berechnen Tarif basis (Selbstbeteiligung 500 EUR) Rundungsfall 0,005 EUR: Schadenshöhe 500,005 EUR → Auszahlung 0,01 EUR" name="US1 – Auszahlung berechnen Tarif basis (Selbstbeteiligung 500 EUR) Rundungsfall 0,005 EUR: Schadenshöhe 500,005 EUR → Auszahlung 0,01 EUR" time="0">
     </testcase>
     <testcase classname="US1 – Auszahlung berechnen Tarif komfort (Selbstbeteiligung 250 EUR) akzeptiert Tarif komfort und liefert korrekte Selbstbeteiligung" name="US1 – Auszahlung berechnen Tarif komfort (Selbstbeteiligung 250 EUR) akzeptiert Tarif komfort und liefert korrekte Selbstbeteiligung" time="0">
     </testcase>
     <testcase classname="US1 – Auszahlung berechnen Tarif komfort (Selbstbeteiligung 250 EUR) Schadenshöhe 0 EUR → Auszahlung 0 EUR" name="US1 – Auszahlung berechnen Tarif komfort (Selbstbeteiligung 250 EUR) Schadenshöhe 0 EUR → Auszahlung 0 EUR" time="0">
     </testcase>
-    <testcase classname="US1 – Auszahlung berechnen Tarif komfort (Selbstbeteiligung 250 EUR) Schadenshöhe = Selbstbeteiligung (250 EUR) → Auszahlung 0 EUR" name="US1 – Auszahlung berechnen Tarif komfort (Selbstbeteiligung 250 EUR) Schadenshöhe = Selbstbeteiligung (250 EUR) → Auszahlung 0 EUR" time="0.001">
+    <testcase classname="US1 – Auszahlung berechnen Tarif komfort (Selbstbeteiligung 250 EUR) Schadenshöhe = Selbstbeteiligung (250 EUR) → Auszahlung 0 EUR" name="US1 – Auszahlung berechnen Tarif komfort (Selbstbeteiligung 250 EUR) Schadenshöhe = Selbstbeteiligung (250 EUR) → Auszahlung 0 EUR" time="0">
     </testcase>
     <testcase classname="US1 – Auszahlung berechnen Tarif komfort (Selbstbeteiligung 250 EUR) Schadenshöhe 1000 EUR → Auszahlung 750 EUR" name="US1 – Auszahlung berechnen Tarif komfort (Selbstbeteiligung 250 EUR) Schadenshöhe 1000 EUR → Auszahlung 750 EUR" time="0">
     </testcase>
-    <testcase classname="US1 – Auszahlung berechnen Tarif komfort (Selbstbeteiligung 250 EUR) Rundungsfall 0,005 EUR: Schadenshöhe 250,005 EUR → Auszahlung 0,01 EUR" name="US1 – Auszahlung berechnen Tarif komfort (Selbstbeteiligung 250 EUR) Rundungsfall 0,005 EUR: Schadenshöhe 250,005 EUR → Auszahlung 0,01 EUR" time="0">
+    <testcase classname="US1 – Auszahlung berechnen Tarif komfort (Selbstbeteiligung 250 EUR) Rundungsfall 0,005 EUR: Schadenshöhe 250,005 EUR → Auszahlung 0,01 EUR" name="US1 – Auszahlung berechnen Tarif komfort (Selbstbeteiligung 250 EUR) Rundungsfall 0,005 EUR: Schadenshöhe 250,005 EUR → Auszahlung 0,01 EUR" time="0.059">
     </testcase>
-    <testcase classname="US1 – Auszahlung berechnen Tarif premium (Selbstbeteiligung 100 EUR) akzeptiert Tarif premium und liefert korrekte Selbstbeteiligung" name="US1 – Auszahlung berechnen Tarif premium (Selbstbeteiligung 100 EUR) akzeptiert Tarif premium und liefert korrekte Selbstbeteiligung" time="0">
+    <testcase classname="US1 – Auszahlung berechnen Tarif premium (Selbstbeteiligung 100 EUR) akzeptiert Tarif premium und liefert korrekte Selbstbeteiligung" name="US1 – Auszahlung berechnen Tarif premium (Selbstbeteiligung 100 EUR) akzeptiert Tarif premium und liefert korrekte Selbstbeteiligung" time="0.001">
     </testcase>
     <testcase classname="US1 – Auszahlung berechnen Tarif premium (Selbstbeteiligung 100 EUR) Schadenshöhe 0 EUR → Auszahlung 0 EUR" name="US1 – Auszahlung berechnen Tarif premium (Selbstbeteiligung 100 EUR) Schadenshöhe 0 EUR → Auszahlung 0 EUR" time="0">
     </testcase>
@@ -33,13 +105,13 @@
     </testcase>
     <testcase classname="US1 – Auszahlung berechnen Tarif premium (Selbstbeteiligung 100 EUR) Rundungsfall 0,005 EUR: Schadenshöhe 100,005 EUR → Auszahlung 0,01 EUR" name="US1 – Auszahlung berechnen Tarif premium (Selbstbeteiligung 100 EUR) Rundungsfall 0,005 EUR: Schadenshöhe 100,005 EUR → Auszahlung 0,01 EUR" time="0">
     </testcase>
-    <testcase classname="US1 – Auszahlung berechnen Ergebnisobjekt BerechnungsErgebnis enthält alle Pflichtfelder: schadenshoehe, selbstbeteiligung, auszahlung, gekuerzt" name="US1 – Auszahlung berechnen Ergebnisobjekt BerechnungsErgebnis enthält alle Pflichtfelder: schadenshoehe, selbstbeteiligung, auszahlung, gekuerzt" time="0.001">
+    <testcase classname="US1 – Auszahlung berechnen Ergebnisobjekt BerechnungsErgebnis enthält alle Pflichtfelder: schadenshoehe, selbstbeteiligung, auszahlung, gekuerzt" name="US1 – Auszahlung berechnen Ergebnisobjekt BerechnungsErgebnis enthält alle Pflichtfelder: schadenshoehe, selbstbeteiligung, auszahlung, gekuerzt" time="0.005">
     </testcase>
     <testcase classname="US1 – Auszahlung berechnen Ergebnisobjekt BerechnungsErgebnis schadenshoehe im Ergebnis entspricht dem Eingabewert" name="US1 – Auszahlung berechnen Ergebnisobjekt BerechnungsErgebnis schadenshoehe im Ergebnis entspricht dem Eingabewert" time="0">
     </testcase>
-    <testcase classname="US1 – Auszahlung berechnen Ergebnisobjekt BerechnungsErgebnis nicht gekürztes Ergebnis hat gekuerzt = false" name="US1 – Auszahlung berechnen Ergebnisobjekt BerechnungsErgebnis nicht gekürztes Ergebnis hat gekuerzt = false" time="0.001">
+    <testcase classname="US1 – Auszahlung berechnen Ergebnisobjekt BerechnungsErgebnis nicht gekürztes Ergebnis hat gekuerzt = false" name="US1 – Auszahlung berechnen Ergebnisobjekt BerechnungsErgebnis nicht gekürztes Ergebnis hat gekuerzt = false" time="0">
     </testcase>
-    <testcase classname="US1 – Auszahlung berechnen Kaufmännische Rundung auf 2 Nachkommastellen Ergebnis hat maximal zwei Nachkommastellen" name="US1 – Auszahlung berechnen Kaufmännische Rundung auf 2 Nachkommastellen Ergebnis hat maximal zwei Nachkommastellen" time="0">
+    <testcase classname="US1 – Auszahlung berechnen Kaufmännische Rundung auf 2 Nachkommastellen Ergebnis hat maximal zwei Nachkommastellen" name="US1 – Auszahlung berechnen Kaufmännische Rundung auf 2 Nachkommastellen Ergebnis hat maximal zwei Nachkommastellen" time="0.001">
     </testcase>
     <testcase classname="US1 – Auszahlung berechnen Kaufmännische Rundung auf 2 Nachkommastellen Schadenshöhe 500,004 EUR bei basis → Auszahlung 0,00 EUR (abrunden)" name="US1 – Auszahlung berechnen Kaufmännische Rundung auf 2 Nachkommastellen Schadenshöhe 500,004 EUR bei basis → Auszahlung 0,00 EUR (abrunden)" time="0">
     </testcase>
@@ -49,7 +121,7 @@
     </testcase>
     <testcase classname="US2 – Auszahlungsobergrenze Tarif basis (Obergrenze 5.000 EUR) Auszahlung über Obergrenze → auf 5.000 EUR begrenzt, gekuerzt = true" name="US2 – Auszahlungsobergrenze Tarif basis (Obergrenze 5.000 EUR) Auszahlung über Obergrenze → auf 5.000 EUR begrenzt, gekuerzt = true" time="0">
     </testcase>
-    <testcase classname="US2 – Auszahlungsobergrenze Tarif basis (Obergrenze 5.000 EUR) Sehr hoher Schaden → auf Obergrenze 5.000 EUR begrenzt" name="US2 – Auszahlungsobergrenze Tarif basis (Obergrenze 5.000 EUR) Sehr hoher Schaden → auf Obergrenze 5.000 EUR begrenzt" time="0.001">
+    <testcase classname="US2 – Auszahlungsobergrenze Tarif basis (Obergrenze 5.000 EUR) Sehr hoher Schaden → auf Obergrenze 5.000 EUR begrenzt" name="US2 – Auszahlungsobergrenze Tarif basis (Obergrenze 5.000 EUR) Sehr hoher Schaden → auf Obergrenze 5.000 EUR begrenzt" time="0">
     </testcase>
     <testcase classname="US2 – Auszahlungsobergrenze Tarif komfort (Obergrenze 20.000 EUR) Auszahlung unter Obergrenze → nicht gekürzt" name="US2 – Auszahlungsobergrenze Tarif komfort (Obergrenze 20.000 EUR) Auszahlung unter Obergrenze → nicht gekürzt" time="0">
     </testcase>
@@ -69,11 +141,11 @@
     </testcase>
     <testcase classname="US3 – Eingaben prüfen und Fehler melden Negative Schadenshöhe Fehlermeldung ist auf Deutsch" name="US3 – Eingaben prüfen und Fehler melden Negative Schadenshöhe Fehlermeldung ist auf Deutsch" time="0.001">
     </testcase>
-    <testcase classname="US3 – Eingaben prüfen und Fehler melden Negative Schadenshöhe liefert kein falsches Berechnungsergebnis" name="US3 – Eingaben prüfen und Fehler melden Negative Schadenshöhe liefert kein falsches Berechnungsergebnis" time="0.001">
+    <testcase classname="US3 – Eingaben prüfen und Fehler melden Negative Schadenshöhe liefert kein falsches Berechnungsergebnis" name="US3 – Eingaben prüfen und Fehler melden Negative Schadenshöhe liefert kein falsches Berechnungsergebnis" time="0">
     </testcase>
-    <testcase classname="US3 – Eingaben prüfen und Fehler melden Keine Zahl als Schadenshöhe wirft einen Fehler bei string &quot;1000&quot;" name="US3 – Eingaben prüfen und Fehler melden Keine Zahl als Schadenshöhe wirft einen Fehler bei string &quot;1000&quot;" time="0">
+    <testcase classname="US3 – Eingaben prüfen und Fehler melden Keine Zahl als Schadenshöhe wirft einen Fehler bei string &quot;1000&quot;" name="US3 – Eingaben prüfen und Fehler melden Keine Zahl als Schadenshöhe wirft einen Fehler bei string &quot;1000&quot;" time="0.001">
     </testcase>
-    <testcase classname="US3 – Eingaben prüfen und Fehler melden Keine Zahl als Schadenshöhe wirft einen Fehler bei null" name="US3 – Eingaben prüfen und Fehler melden Keine Zahl als Schadenshöhe wirft einen Fehler bei null" time="0.001">
+    <testcase classname="US3 – Eingaben prüfen und Fehler melden Keine Zahl als Schadenshöhe wirft einen Fehler bei null" name="US3 – Eingaben prüfen und Fehler melden Keine Zahl als Schadenshöhe wirft einen Fehler bei null" time="0">
     </testcase>
     <testcase classname="US3 – Eingaben prüfen und Fehler melden Keine Zahl als Schadenshöhe wirft einen Fehler bei undefined" name="US3 – Eingaben prüfen und Fehler melden Keine Zahl als Schadenshöhe wirft einen Fehler bei undefined" time="0.001">
     </testcase>
@@ -85,11 +157,11 @@
     </testcase>
     <testcase classname="US3 – Eingaben prüfen und Fehler melden Keine Zahl als Schadenshöhe wirft einen Fehler bei einem Objekt" name="US3 – Eingaben prüfen und Fehler melden Keine Zahl als Schadenshöhe wirft einen Fehler bei einem Objekt" time="0">
     </testcase>
-    <testcase classname="US3 – Eingaben prüfen und Fehler melden Keine Zahl als Schadenshöhe Fehlermeldung ist auf Deutsch" name="US3 – Eingaben prüfen und Fehler melden Keine Zahl als Schadenshöhe Fehlermeldung ist auf Deutsch" time="0">
+    <testcase classname="US3 – Eingaben prüfen und Fehler melden Keine Zahl als Schadenshöhe Fehlermeldung ist auf Deutsch" name="US3 – Eingaben prüfen und Fehler melden Keine Zahl als Schadenshöhe Fehlermeldung ist auf Deutsch" time="0.001">
     </testcase>
-    <testcase classname="US3 – Eingaben prüfen und Fehler melden Unbekannter Tarif wirft einen Fehler bei Tarif &quot;gold&quot;" name="US3 – Eingaben prüfen und Fehler melden Unbekannter Tarif wirft einen Fehler bei Tarif &quot;gold&quot;" time="0.001">
+    <testcase classname="US3 – Eingaben prüfen und Fehler melden Unbekannter Tarif wirft einen Fehler bei Tarif &quot;gold&quot;" name="US3 – Eingaben prüfen und Fehler melden Unbekannter Tarif wirft einen Fehler bei Tarif &quot;gold&quot;" time="0">
     </testcase>
-    <testcase classname="US3 – Eingaben prüfen und Fehler melden Unbekannter Tarif wirft einen Fehler bei leerem String" name="US3 – Eingaben prüfen und Fehler melden Unbekannter Tarif wirft einen Fehler bei leerem String" time="0">
+    <testcase classname="US3 – Eingaben prüfen und Fehler melden Unbekannter Tarif wirft einen Fehler bei leerem String" name="US3 – Eingaben prüfen und Fehler melden Unbekannter Tarif wirft einen Fehler bei leerem String" time="0.001">
     </testcase>
     <testcase classname="US3 – Eingaben prüfen und Fehler melden Unbekannter Tarif wirft einen Fehler bei null als Tarif" name="US3 – Eingaben prüfen und Fehler melden Unbekannter Tarif wirft einen Fehler bei null als Tarif" time="0">
     </testcase>
@@ -99,11 +171,11 @@
     </testcase>
     <testcase classname="US3 – Eingaben prüfen und Fehler melden Unbekannter Tarif Fehlermeldung enthält den ungültigen Tarif und ist auf Deutsch" name="US3 – Eingaben prüfen und Fehler melden Unbekannter Tarif Fehlermeldung enthält den ungültigen Tarif und ist auf Deutsch" time="0.001">
     </testcase>
-    <testcase classname="US3 – Eingaben prüfen und Fehler melden Unbekannter Tarif liefert kein falsches Berechnungsergebnis bei unbekanntem Tarif" name="US3 – Eingaben prüfen und Fehler melden Unbekannter Tarif liefert kein falsches Berechnungsergebnis bei unbekanntem Tarif" time="0.005">
+    <testcase classname="US3 – Eingaben prüfen und Fehler melden Unbekannter Tarif liefert kein falsches Berechnungsergebnis bei unbekanntem Tarif" name="US3 – Eingaben prüfen und Fehler melden Unbekannter Tarif liefert kein falsches Berechnungsergebnis bei unbekanntem Tarif" time="0">
     </testcase>
     <testcase classname="US3 – Eingaben prüfen und Fehler melden Fehlermeldungen Fehlermeldung ist eine Instanz von Error" name="US3 – Eingaben prüfen und Fehler melden Fehlermeldungen Fehlermeldung ist eine Instanz von Error" time="0.001">
     </testcase>
-    <testcase classname="US3 – Eingaben prüfen und Fehler melden Fehlermeldungen Fehlermeldung ist nicht leer" name="US3 – Eingaben prüfen und Fehler melden Fehlermeldungen Fehlermeldung ist nicht leer" time="0.001">
+    <testcase classname="US3 – Eingaben prüfen und Fehler melden Fehlermeldungen Fehlermeldung ist nicht leer" name="US3 – Eingaben prüfen und Fehler melden Fehlermeldungen Fehlermeldung ist nicht leer" time="0">
     </testcase>
   </testsuite>
 </testsuites>
