@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuites name="jest tests" tests="102" failures="0" errors="0" time="2.14">
+  <testsuite name="extractExtension" errors="0" failures="0" skipped="0" timestamp="2026-11-08T13:58:36" time="1.101" tests="54">
+    <testcase classname="extractExtension extracts jpg from filename" name="extractExtension extracts jpg from filename" time="0.076">
+    </testcase>
+    <testcase classname="extractExtension extracts png from filename" name="extractExtension extracts png from filename" time="0">
+    </testcase>
+    <testcase classname="extractExtension extracts heic from filename" name="extractExtension extracts heic from filename" time="0.001">
+    </testcase>
+    <testcase classname="extractExtension extracts from multi-dot filename" name="extractExtension extracts from multi-dot filename" time="0.001">
+    </testcase>
+    <testcase classname="extractExtension returns empty string for no extension" name="extractExtension returns empty string for no extension" time="0.001">
+    </testcase>
+    <testcase classname="isSupportedFormat accepts image/jpeg mime type" name="isSupportedFormat accepts image/jpeg mime type" time="0.012">
+    </testcase>
+    <testcase classname="isSupportedFormat accepts image/jpg mime type" name="isSupportedFormat accepts image/jpg mime type" time="0">
+    </testcase>
+    <testcase classname="isSupportedFormat accepts image/png mime type" name="isSupportedFormat accepts image/png mime type" time="0.001">
+    </testcase>
+    <testcase classname="isSupportedFormat accepts image/heic mime type" name="isSupportedFormat accepts image/heic mime type" time="0.001">
+    </testcase>
+    <testcase classname="isSupportedFormat accepts image/heif mime type" name="isSupportedFormat accepts image/heif mime type" time="0.001">
+    </testcase>
+    <testcase classname="isSupportedFormat accepts bare jpg extension" name="isSupportedFormat accepts bare jpg extension" time="0.001">
+    </testcase>
+    <testcase classname="isSupportedFormat accepts bare jpeg extension" name="isSupportedFormat accepts bare jpeg extension" time="0.001">
+    </testcase>
+    <testcase classname="isSupportedFormat accepts bare png extension" name="isSupportedFormat accepts bare png extension" time="0">
+    </testcase>
+    <testcase classname="isSupportedFormat accepts bare heic extension" name="isSupportedFormat accepts bare heic extension" time="0">
+    </testcase>
+    <testcase classname="isSupportedFormat rejects gif" name="isSupportedFormat rejects gif" time="0.001">
+    </testcase>
+    <testcase classname="isSupportedFormat rejects bmp" name="isSupportedFormat rejects bmp" time="0">
+    </testcase>
+    <testcase classname="isSupportedFormat rejects pdf" name="isSupportedFormat rejects pdf" time="0.001">
+    </testcase>
+    <testcase classname="isSupportedFormat rejects webp" name="isSupportedFormat rejects webp" time="0">
+    </testcase>
+    <testcase classname="isSupportedFormat rejects tiff" name="isSupportedFormat rejects tiff" time="0">
+    </testcase>
+    <testcase classname="isSupportedFormat rejects empty string" name="isSupportedFormat rejects empty string" time="0.001">
+    </testcase>
+    <testcase classname="resolveFormat resolves image/jpeg to jpg" name="resolveFormat resolves image/jpeg to jpg" time="0">
+    </testcase>
+    <testcase classname="resolveFormat resolves image/heif to heic" name="resolveFormat resolves image/heif to heic" time="0.001">
+    </testcase>
+    <testcase classname="resolveFormat resolves bare png to png" name="resolveFormat resolves bare png to png" time="0.001">
+    </testcase>
+    <testcase classname="resolveFormat returns null for unsupported" name="resolveFormat returns null for unsupported" time="0.001">
+    </testcase>
+    <testcase classname="resolveFormat returns null for empty string" name="resolveFormat returns null for empty string" time="0">
+    </testcase>
+    <testcase classname="isFileSizeValid accepts file at exactly 15 MB" name="isFileSizeValid accepts file at exactly 15 MB" time="0.001">
+    </testcase>
+    <testcase classname="isFileSizeValid accepts file below 15 MB" name="isFileSizeValid accepts file below 15 MB" time="0">
+    </testcase>
+    <testcase classname="isFileSizeValid rejects file above 15 MB" name="isFileSizeValid rejects file above 15 MB" time="0.001">
+    </testcase>
+    <testcase classname="isFileSizeValid rejects zero byte file" name="isFileSizeValid rejects zero byte file" time="0">
+    </testcase>
+    <testcase classname="isFileSizeValid rejects negative size" name="isFileSizeValid rejects negative size" time="0">
+    </testcase>
+    <testcase classname="isFileSizeValid accepts file at custom max" name="isFileSizeValid accepts file at custom max" time="0.001">
+    </testcase>
+    <testcase classname="isFileSizeValid rejects file exceeding custom max" name="isFileSizeValid rejects file exceeding custom max" time="0">
+    </testcase>
+    <testcase classname="validatePhotoFile returns null for a valid jpg file" name="validatePhotoFile returns null for a valid jpg file" time="0">
+    </testcase>
+    <testcase classname="validatePhotoFile returns null for a valid png file" name="validatePhotoFile returns null for a valid png file" time="0.001">
+    </testcase>
+    <testcase classname="validatePhotoFile returns null for a valid heic file" name="validatePhotoFile returns null for a valid heic file" time="0">
+    </testcase>
+    <testcase classname="validatePhotoFile returns INVALID_FORMAT error for gif" name="validatePhotoFile returns INVALID_FORMAT error for gif" time="0.001">
+    </testcase>
+    <testcase classname="validatePhotoFile returns INVALID_FORMAT error for pdf" name="validatePhotoFile returns INVALID_FORMAT error for pdf" time="0">
+    </testcase>
+    <testcase classname="validatePhotoFile returns INVALID_FORMAT error for webp" name="validatePhotoFile returns INVALID_FORMAT error for webp" time="0">
+    </testcase>
+    <testcase classname="validatePhotoFile returns FILE_TOO_LARGE error for file exceeding 15 MB" name="validatePhotoFile returns FILE_TOO_LARGE error for file exceeding 15 MB" time="0">
+    </testcase>
+    <testcase classname="validatePhotoFile returns FILE_TOO_LARGE with size info" name="validatePhotoFile returns FILE_TOO_LARGE with size info" time="0.001">
+    </testcase>
+    <testcase classname="validatePhotoFile returns LIMIT_EXCEEDED when count equals maxPhotos" name="validatePhotoFile returns LIMIT_EXCEEDED when count equals maxPhotos" time="0">
+    </testcase>
+    <testcase classname="validatePhotoFile returns LIMIT_EXCEEDED when count exceeds maxPhotos" name="validatePhotoFile returns LIMIT_EXCEEDED when count exceeds maxPhotos" time="0">
+    </testcase>
+    <testcase classname="validatePhotoFile returns null when count is exactly one below limit" name="validatePhotoFile returns null when count is exactly one below limit" time="0.001">
+    </testcase>
+    <testcase classname="validatePhotoFile LIMIT_EXCEEDED takes priority over INVALID_FORMAT" name="validatePhotoFile LIMIT_EXCEEDED takes priority over INVALID_FORMAT" time="0">
+    </testcase>
+    <testcase classname="validatePhotoFile falls back to extension when mimeType is application/octet-stream" name="validatePhotoFile falls back to extension when mimeType is application/octet-stream" time="0">
+    </testcase>
+    <testcase classname="validatePhotoFile rejects if both mimeType and extension are invalid" name="validatePhotoFile rejects if both mimeType and extension are invalid" time="0">
+    </testcase>
+    <testcase classname="buildCounterDisplay displays 0/10 initially" name="buildCounterDisplay displays 0/10 initially" time="0.001">
+    </testcase>
+    <testcase classname="buildCounterDisplay displays 1/10 after first photo" name="buildCounterDisplay displays 1/10 after first photo" time="0">
+    </testcase>
+    <testcase classname="buildCounterDisplay displays 10/10 at limit" name="buildCounterDisplay displays 10/10 at limit" time="0">
+    </testcase>
+    <testcase classname="buildCounterDisplay uses custom max" name="buildCounterDisplay uses custom max" time="0">
+    </testcase>
+    <testcase classname="buildPermissionDeniedMessage mentions Kamera for camera source" name="buildPermissionDeniedMessage mentions Kamera for camera source" time="0.061">
+    </testcase>
+    <testcase classname="buildPermissionDeniedMessage mentions Galerie for gallery source" name="buildPermissionDeniedMessage mentions Galerie for gallery source" time="0.001">
+    </testcase>
+    <testcase classname="buildPermissionDeniedMessage is a non-empty string" name="buildPermissionDeniedMessage is a non-empty string" time="0">
+    </testcase>
+    <testcase classname="buildOfflineMessage returns exact prescribed offline message" name="buildOfflineMessage returns exact prescribed offline message" time="0">
+    </testcase>
+  </testsuite>
+  <testsuite name="PhotoManager – initial state" errors="0" failures="0" skipped="0" timestamp="2026-11-08T13:58:36" time="1.209" tests="48">
+    <testcase classname="PhotoManager – initial state starts with 0 photos" name="PhotoManager – initial state starts with 0 photos" time="0.006">
+    </testcase>
+    <testcase classname="PhotoManager – initial state displays counter as 0/10 initially" name="PhotoManager – initial state displays counter as 0/10 initially" time="0.001">
+    </testcase>
+    <testcase classname="PhotoManager – initial state is not at limit initially" name="PhotoManager – initial state is not at limit initially" time="0">
+    </testcase>
+    <testcase classname="PhotoManager – initial state photos array is empty" name="PhotoManager – initial state photos array is empty" time="0.001">
+    </testcase>
+    <testcase classname="PhotoManager – addPhotoFromCamera successfully adds a photo from camera" name="PhotoManager – addPhotoFromCamera successfully adds a photo from camera" time="0.001">
+    </testcase>
+    <testcase classname="PhotoManager – addPhotoFromCamera increments counter after camera capture" name="PhotoManager – addPhotoFromCamera increments counter after camera capture" time="0.001">
+    </testcase>
+    <testcase classname="PhotoManager – addPhotoFromCamera requests camera permission before opening camera" name="PhotoManager – addPhotoFromCamera requests camera permission before opening camera" time="0.001">
+    </testcase>
+    <testcase classname="PhotoManager – addPhotoFromCamera returns PERMISSION_DENIED when camera permission denied" name="PhotoManager – addPhotoFromCamera returns PERMISSION_DENIED when camera permission denied" time="0.001">
+    </testcase>
+    <testcase classname="PhotoManager – addPhotoFromCamera returns USER_CANCELLED when user cancels camera" name="PhotoManager – addPhotoFromCamera returns USER_CANCELLED when user cancels camera" time="0">
+    </testcase>
+    <testcase classname="PhotoManager – addPhotoFromCamera returns CAMERA_UNAVAILABLE when camera throws" name="PhotoManager – addPhotoFromCamera returns CAMERA_UNAVAILABLE when camera throws" time="0.001">
+    </testcase>
+    <testcase classname="PhotoManager – addPhotoFromCamera rejects unsupported format from camera" name="PhotoManager – addPhotoFromCamera rejects unsupported format from camera" time="0">
+    </testcase>
+    <testcase classname="PhotoManager – addPhotoFromCamera rejects file exceeding 15 MB from camera" name="PhotoManager – addPhotoFromCamera rejects file exceeding 15 MB from camera" time="0.001">
+    </testcase>
+    <testcase classname="PhotoManager – addPhotoFromCamera accepts file at exactly 15 MB" name="PhotoManager – addPhotoFromCamera accepts file at exactly 15 MB" time="0.001">
+    </testcase>
+    <testcase classname="PhotoManager – addPhotoFromGallery successfully adds a photo from gallery" name="PhotoManager – addPhotoFromGallery successfully adds a photo from gallery" time="0.001">
+    </testcase>
+    <testcase classname="PhotoManager – addPhotoFromGallery increments counter after gallery selection" name="PhotoManager – addPhotoFromGallery increments counter after gallery selection" time="0.001">
+    </testcase>
+    <testcase classname="PhotoManager – addPhotoFromGallery requests gallery permission before opening gallery" name="PhotoManager – addPhotoFromGallery requests gallery permission before opening gallery" time="0">
+    </testcase>
+    <testcase classname="PhotoManager – addPhotoFromGallery returns PERMISSION_DENIED with gallery message when denied" name="PhotoManager – addPhotoFromGallery returns PERMISSION_DENIED with gallery message when denied" time="0.001">
+    </testcase>
+    <testcase classname="PhotoManager – addPhotoFromGallery returns USER_CANCELLED when user cancels gallery" name="PhotoManager – addPhotoFromGallery returns USER_CANCELLED when user cancels gallery" time="0.001">
+    </testcase>
+    <testcase classname="PhotoManager – addPhotoFromGallery accepts heic format from gallery" name="PhotoManager – addPhotoFromGallery accepts heic format from gallery" time="0.05">
+    </testcase>
+    <testcase classname="PhotoManager – addPhotoFromGallery accepts png format from gallery" name="PhotoManager – addPhotoFromGallery accepts png format from gallery" time="0">
+    </testcase>
+    <testcase classname="PhotoManager – addPhotoFromGallery rejects bmp format from gallery" name="PhotoManager – addPhotoFromGallery rejects bmp format from gallery" time="0.001">
+    </testcase>
+    <testcase classname="PhotoManager – addPhotoFromGallery falls back to extension when mime is generic" name="PhotoManager – addPhotoFromGallery falls back to extension when mime is generic" time="0.001">
+    </testcase>
+    <testcase classname="PhotoManager – photo limit (max 10) blocks camera when limit reached" name="PhotoManager – photo limit (max 10) blocks camera when limit reached" time="0.001">
+    </testcase>
+    <testcase classname="PhotoManager – photo limit (max 10) blocks gallery when limit reached" name="PhotoManager – photo limit (max 10) blocks gallery when limit reached" time="0">
+    </testcase>
+    <testcase classname="PhotoManager – photo limit (max 10) shows 10/10 counter at limit" name="PhotoManager – photo limit (max 10) shows 10/10 counter at limit" time="0.001">
+    </testcase>
+    <testcase classname="PhotoManager – photo limit (max 10) allows adding after removing below limit" name="PhotoManager – photo limit (max 10) allows adding after removing below limit" time="0.001">
+    </testcase>
+    <testcase classname="PhotoManager – photo limit (max 10) does not exceed limit even with rapid adds" name="PhotoManager – photo limit (max 10) does not exceed limit even with rapid adds" time="0">
+    </testcase>
+    <testcase classname="PhotoManager – removePhoto removes an existing photo by id" name="PhotoManager – removePhoto removes an existing photo by id" time="0.008">
+    </testcase>
+    <testcase classname="PhotoManager – removePhoto updates counter after removal" name="PhotoManager – removePhoto updates counter after removal" time="0.001">
+    </testcase>
+    <testcase classname="PhotoManager – removePhoto returns false when photo not found" name="PhotoManager – removePhoto returns false when photo not found" time="0">
+    </testcase>
+    <testcase classname="PhotoManager – removePhoto clearPhotos removes all photos" name="PhotoManager – removePhoto clearPhotos removes all photos" time="0">
+    </testcase>
+    <testcase classname="PhotoManager – counter display accuracy updates counter on each add" name="PhotoManager – counter display accuracy updates counter on each add" time="0.001">
+    </testcase>
+    <testcase classname="PhotoManager – counter display accuracy counter reflects state correctly after mixed adds and removes" name="PhotoManager – counter display accuracy counter reflects state correctly after mixed adds and removes" time="0">
+    </testcase>
+    <testcase classname="PhotoManager – offline support returns the prescribed offline message" name="PhotoManager – offline support returns the prescribed offline message" time="0">
+    </testcase>
+    <testcase classname="PhotoManager – offline support marks photos as pending upload when offline" name="PhotoManager – offline support marks photos as pending upload when offline" time="0.001">
+    </testcase>
+    <testcase classname="PhotoManager – offline support no pending photos when online" name="PhotoManager – offline support no pending photos when online" time="0">
+    </testcase>
+    <testcase classname="PhotoManager – offline support marks photo as uploaded" name="PhotoManager – offline support marks photo as uploaded" time="0.001">
+    </testcase>
+    <testcase classname="PhotoManager – offline support markAsUploaded returns false for unknown id" name="PhotoManager – offline support markAsUploaded returns false for unknown id" time="0">
+    </testcase>
+    <testcase classname="PhotoManager – permission helpers requestCameraPermission returns granted=true when granted" name="PhotoManager – permission helpers requestCameraPermission returns granted=true when granted" time="0">
+    </testcase>
+    <testcase classname="PhotoManager – permission helpers requestCameraPermission returns denied message when denied" name="PhotoManager – permission helpers requestCameraPermission returns denied message when denied" time="0">
+    </testcase>
+    <testcase classname="PhotoManager – permission helpers requestGalleryPermission returns granted=true when granted" name="PhotoManager – permission helpers requestGalleryPermission returns granted=true when granted" time="0">
+    </testcase>
+    <testcase classname="PhotoManager – permission helpers requestGalleryPermission returns denied message when denied" name="PhotoManager – permission helpers requestGalleryPermission returns denied message when denied" time="0.001">
+    </testcase>
+    <testcase classname="PhotoManager – platform support works with ios platform config" name="PhotoManager – platform support works with ios platform config" time="0">
+    </testcase>
+    <testcase classname="PhotoManager – platform support works with android platform config" name="PhotoManager – platform support works with android platform config" time="0.001">
+    </testcase>
+    <testcase classname="PhotoManager – photo metadata stores correct uri, fileName, fileSize, mimeType" name="PhotoManager – photo metadata stores correct uri, fileName, fileSize, mimeType" time="0">
+    </testcase>
+    <testcase classname="PhotoManager – photo metadata assigns unique ids to each photo" name="PhotoManager – photo metadata assigns unique ids to each photo" time="0">
+    </testcase>
+    <testcase classname="PhotoManager – photo metadata sets addedAt as a Date" name="PhotoManager – photo metadata sets addedAt as a Date" time="0">
+    </testcase>
+    <testcase classname="PhotoManager – photo metadata newly added photo is not uploaded and not pendingUpload" name="PhotoManager – photo metadata newly added photo is not uploaded and not pendingUpload" time="0">
+    </testcase>
+  </testsuite>
+</testsuites>
