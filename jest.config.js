@@ -9,6 +9,10 @@ module.exports = {
     ['jest-junit', {
       outputDirectory: '.agentsphere/reports',
       outputName: 'junit.xml',
+      addFileAttribute: 'true',
+      classNameTemplate: '{filepath}',
+      titleTemplate: '{title}',
+      ancestorSeparator: ' › ',
     }],
   ],
 };
