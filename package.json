@@ -1,0 +1,19 @@
+{
+  "name": "workspace",
+  "version": "1.0.0",
+  "description": "Initialisiert durch AgentForge Environment Engineer.",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest --reporters=default --reporters=jest-junit"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/jest": "^30.0.0",
+    "jest": "^30.5.2",
+    "jest-junit": "^17.0.0",
+    "ts-jest": "^29.4.15",
+    "typescript": "^6.0.3"
+  }
+}

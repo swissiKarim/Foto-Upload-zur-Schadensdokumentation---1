@@ -1,0 +1,22 @@
+schemaVersion: 2
+rationale: >
+  TypeScript/Jest project implementing the photo capture and gallery selection
+  feature for damage reports. ts-jest compiles TypeScript; jest-junit produces
+  JUnit XML for the platform evidence package. All acceptance criteria are
+  covered by unit and integration tests in src/__tests__/.
+components:
+  - name: damage-photo
+    path: .
+    toolchain:
+      image: agentsphere/sandbox-polyglot
+    verify:
+      - mkdir -p .agentsphere/reports && npx jest --reporters=default --reporters=jest-junit
+    artifacts_ignore:
+      - node_modules/
+      - dist/
+      - coverage/
+definition_of_done:
+  - All 102 Jest tests pass
+  - JUnit XML report written to .agentsphere/reports/junit.xml
+network:
+  needs: []
