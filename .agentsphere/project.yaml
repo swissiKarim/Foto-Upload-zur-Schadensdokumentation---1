@@ -1,0 +1,19 @@
+schemaVersion: 2
+rationale: >
+  TypeScript-Bibliothek mit Jest-Tests. ts-jest kompiliert TypeScript direkt,
+  jest-junit schreibt JUnit-XML für das Evidenzpaket.
+components:
+  - name: app
+    path: .
+    toolchain:
+      image: agentsphere/sandbox-polyglot
+    verify:
+      - npm ci
+      - npm test
+    artifacts_ignore:
+      - node_modules/
+      - dist/
+definition_of_done:
+  - All verify commands pass on the submitted commit
+network:
+  needs: []

@@ -1,0 +1,22 @@
+{
+  "name": "versicherung-auszahlung",
+  "version": "1.0.0",
+  "description": "TypeScript-Bibliothek zur Berechnung der Auszahlung einer Versicherungs-Schadensmeldung",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "test": "jest --reporters=default --reporters=jest-junit",
+    "test:ci": "jest --reporters=jest-junit"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "@types/jest": "^29.5.12",
+    "jest": "^29.7.0",
+    "jest-junit": "^16.0.0",
+    "ts-jest": "^29.1.4",
+    "typescript": "^5.4.5"
+  }
+}
